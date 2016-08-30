@@ -59,12 +59,11 @@ var config = {
     mode: 'dev',
     port: process.env.VCAP_APP_PORT || 3006,
     protocol: 'http',
-    uri: 'http://localhost:3006',
+    uri: appEnv ? appEnv.url : 'http://helper-suite.apps.yookore.net',
     token_secret: 'useraccountservice',
     uas: {
-      host: 'uas.apps.yookosapps.com',
+      host: 'uas.apps.yookore.net',
       path: '/v1',
-      //port: 3000,
       uri: 'http://localhost:3000/'
     },
     emailhippo: {
