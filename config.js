@@ -37,7 +37,7 @@ var config = {
   local: {
     appname: 'helper-suite',
     mode: 'local',
-    port: process.env.VCAP_APP_PORT || 3006,
+    port: process.env.PORT || 3006,
     protocol: 'http',
     uri: 'http://localhost:3006',
     token_secret: 'useraccountservice',
@@ -57,7 +57,7 @@ var config = {
   dev: {
     appname: 'helper-suite',
     mode: 'dev',
-    port: process.env.VCAP_APP_PORT || 3006,
+    port: process.env.PORT || 3006,
     protocol: 'http',
     uri: appEnv ? appEnv.url : 'http://helper-suite.apps.yookore.net',
     token_secret: 'useraccountservice',
@@ -76,7 +76,7 @@ var config = {
   beta: {
     appname: appEnv ? appEnv.name : 'helper-suite',
     mode: appEnv ? appEnv.app.space_name : 'local',
-    port: process.env.VCAP_APP_PORT,
+    port: process.env.PORT,
     protocol: 'http',
     uri: appEnv ? appEnv.url : 'http://helper-suite.apps.yookosapp.com',
     token_secret: 'useraccountservice',
